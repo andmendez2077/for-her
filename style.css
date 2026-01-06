@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffc1d9, #ffb3c6);
+    font-family: Arial, sans-serif;
+}
+
+.center-text {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    color: #ff2f92;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.flower {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #ff2f92;
+    border-radius: 50%;
+    animation: float 15s linear infinite;
+    box-shadow:
+        -20px 0 white,
+        20px 0 white,
+        0 -20px white,
+        0 20px white;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+    }
+}
